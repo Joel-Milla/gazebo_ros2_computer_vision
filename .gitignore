@@ -1,0 +1,96 @@
+# ROS2 Build artifacts
+build/
+install/
+log/
+
+# Colcon specific
+.colcon_install_layout
+.colcon_build_layout
+
+# CMake
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps/
+
+# C++ compiled objects
+*.o
+*.so
+*.so.*
+*.a
+*.dylib
+*.exe
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Qt Creator
+CMakeLists.txt.user*
+*.pro.user*
+
+# Eclipse
+.project
+.cproject
+.pydevproject
+.settings/
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# OS specific
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ROS specific
+*.bag
+*.db3
+.ros/
+
+# OpenCV build artifacts (if building OpenCV from source)
+opencv/
+opencv_contrib/
+
+# Config files that might contain secrets
+config/secrets/
+*.pem
+*.key
+
+# Temporary files
+*.tmp
+*.temp
+
+# Log files
+*.log
+
+# Core dumps
+core.*
+
+# Gazebo
+.gazebo/
+
+# URDF/Xacro generated files
+*.urdf.xacro.generated
+.cache/
