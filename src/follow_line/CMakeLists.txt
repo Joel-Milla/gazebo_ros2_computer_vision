@@ -11,6 +11,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 find_package(ament_cmake REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
+find_package(cv_bridge REQUIRED)
 find_package(rclcpp REQUIRED)
 
 find_package(OpenCV REQUIRED)
@@ -32,13 +33,18 @@ endif()
 
 
 add_executable(follow_line_executable src/follow_line.cpp)
-ament_target_dependencies(follow_line_executable rclcpp sensor_msgs)
+ament_target_dependencies(follow_line_executable rclcpp sensor_msgs cv_bridge geometry_msgs)
 target_link_libraries (follow_line_executable ${OpenCV_LIBRARIES}
 )
 
 install (TARGETS
 follow_line_executable
-DESTINATION lib/${PROJECT_NAME}
+DESTINATION "lib/${PROJECT_NAME}"
+)
+
+INSTALL (DIRECTORY
+  launch
+  DESTINATION "share/${PROJECT_NAME}"
 )
 
 ament_package()
